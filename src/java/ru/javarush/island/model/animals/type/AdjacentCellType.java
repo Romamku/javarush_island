@@ -6,5 +6,4 @@ public enum AdjacentCellType {
     BOTTOM,
     LEFT,
     RIGHT
-
 }

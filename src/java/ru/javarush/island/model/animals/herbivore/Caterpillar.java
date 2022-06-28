@@ -5,9 +5,12 @@ import ru.javarush.island.model.animals.type.CreatureType;
 import ru.javarush.island.model.animals.absract.Herbivore;
 
 public class Caterpillar extends Herbivore {
-    public static final double AMOUNT = GameSettings.getSetting().GetMaxAmount(CreatureType.CATERPILLAR);
 
     public Caterpillar(GameSettings settings, CreatureType type) {
         super(settings, type);
+    }
+
+    @Override
+    public void move() {
     }
 }

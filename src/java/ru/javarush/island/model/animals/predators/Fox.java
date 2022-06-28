@@ -5,9 +5,8 @@ import ru.javarush.island.model.animals.type.CreatureType;
 import ru.javarush.island.model.animals.absract.Predator;
 
 public class Fox extends Predator {
-    public static final double AMOUNT = GameSettings.getSetting().GetMaxAmount(CreatureType.FOX);
 
-    protected Fox(GameSettings settings, CreatureType type) {
+    public Fox(GameSettings settings, CreatureType type) {
         super(settings, type);
     }
 }

@@ -12,19 +12,6 @@ public class CellStorage {
         findAdjacentCell();
     }
 
-    public Cell getCell(int column, int row) {
-        String cellName = Cell.createName(column, row);
-        return cellHashMap.getOrDefault(cellName, null);
-    }
-
-    public Cell getRandomCell() {
-        String cellName = Cell.createName(RandomHelper.get(100), RandomHelper.get(20));
-        return cellHashMap.getOrDefault(cellName, null);
-    }
-
-    public Cell[] getAll() {
-        return cellHashMap.values().toArray(new Cell[0]);
-    }
     private Map<String, Cell> createCellHashMap(int islandLength, int islandWidth) {
         Map<String, Cell> cellHashMap = new TreeMap<>();
 
@@ -34,6 +21,7 @@ public class CellStorage {
                 cellHashMap.put(cell.name, cell);
             }
         }
+        System.out.println();
         return cellHashMap;
     }
 
@@ -41,5 +29,14 @@ public class CellStorage {
         for (Cell cell : cellHashMap.values()) {
             cell.setAdjacentCells(this);
         }
+    }
+
+    public Cell getCell(int column, int row) {
+        String cellName = Cell.createName(column, row);
+        return cellHashMap.getOrDefault(cellName, null);
+    }
+
+    public Cell[] getAllCell() {
+        return cellHashMap.values().toArray(new Cell[0]);
     }
 }
