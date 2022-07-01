@@ -20,7 +20,7 @@ public class Display {
             width = Integer.parseInt(reader.readLine());
         }
         catch (IOException | NullPointerException | NumberFormatException ex) {
-            System.out.println("Вы ввели некорректное значение!");
+            System.out.println("You entered an incorrect value!");
         }
     }
 }
